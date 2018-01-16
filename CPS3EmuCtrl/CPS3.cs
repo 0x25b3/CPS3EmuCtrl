@@ -73,12 +73,12 @@ namespace CPS3EmuCtrl
                 // Delay for some milliseconds to give the window some time to open up
                 Thread.Sleep(CPS3StepDelay);
 
-                //TODO: Get window position
+                // Get window position
                 (int EmulatorX, int EmulatorY) = Win32.GetPosition(EmulatorProcess);
 
                 Thread.Sleep(CPS3StepDelay);
 
-                // Stange positions, probably due to the border. Calibrated using trial and error for Windows 10
+                // Strange positions, probably due to the window's border. Calibrated using trial and error for Windows 10
                 var EmulatorMenuPosition = new System.Drawing.Point(30, -20);
                 var LoadRomPosition = new System.Drawing.Point(25, 10);
                 var GamePosition = new System.Drawing.Point(25, 65 + ((int)Game * 14));
